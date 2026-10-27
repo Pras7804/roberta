@@ -1,0 +1,27 @@
+BIOPROSES SEL - APLIKASI STREAMLIT BI-ENCODER + COSINE SIMILARITY
+================================================================
+
+INI VERSI BARU YANG HANYA MEMAKAI SATU METODE.
+Tidak membutuhkan model Cross-Encoder 1 GB, metadata Cross, OLS, atau regresi linear.
+
+1. Ekstrak ZIP ke folder BARU (jangan campur dengan proyek lama).
+2. Buka folder hasil ekstrak di VS Code.
+3. Jalankan dari TERMINAL VS Code (bukan kotak Search):
+
+   python -m pip install -r requirements.txt
+   python -m streamlit run riset.py
+
+4. Buka localhost yang ditunjukkan terminal.
+5. Pilih kode soal (01-37) di atas form.
+6. Pertanyaan, kunci guru, dan bobot otomatis diambil dari Excel.
+7. Pilih "Koreksi Satu Jawaban" atau "Koreksi 34 Siswa".
+8. Klik tombol penilaian dan unduh hasil Excel.
+
+CATATAN:
+- Input model hanya jawaban siswa dan kunci guru sesuai kode Bi-Encoder asli.
+- Normalisasi TEKS tetap dipakai sebagaimana pra_pemrosesan di notebook;
+  yang dihapus adalah normalisasi TARGET untuk OLS/regresi, bukan pembersihan teks.
+- Bobot skor: nilai cosine x bobot; lalu bulatkan rubrik 0.5.
+- Tidak perlu training ulang model.
+- Unduhan awal xlm-roberta-base butuh internet dan ruang disk yang memadai.
+- Gunakan untuk membantu guru, bukan menggantikan penilaian konseptual guru.
